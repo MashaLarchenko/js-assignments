@@ -59,7 +59,7 @@ function getJSON(obj) {
  */
 function fromJSON(proto, json) {
     let obj = JSON.parse(json);
-   return  obj.proto = proto;
+   return  obj.prototype = proto;
     
 }
 
