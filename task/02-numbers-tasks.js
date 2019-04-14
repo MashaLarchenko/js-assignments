@@ -115,10 +115,9 @@ function getLinearEquationRoot(a, b) {
  *   (0,1) (1,2)     => 0
  */
 function getAngleBetweenVectors(x1, y1, x2, y2) {
-   let px = Math.sqrt(Math.pow(x1, 2) + Math.pow(x2, 2));
-   let py = Math.sqrt(Math.pow(y1, 2) + Math.pow(y2, 2));
-   let res = ((x1 * y1) + (x2 * y2)) / (px * py);
-    return res;
+   let px = Math.sqrt(Math.pow(x1, 2) + Math.pow(y1, 2));
+   let py = Math.sqrt(Math.pow(x2, 2) + Math.pow(y2, 2));
+   return Math.acos(((x1 * x2) + (y1 * y2)) / (px * py));
 }
 
 /**
@@ -189,7 +188,7 @@ function getParallelipidedDiagonal(a,b,c) {
  *   1678, 3  => 2000
  */
 function roundToPowerOfTen(num, pow) {
-    throw new Error('Not implemented');
+     return   Math.round((num / Math.pow(10, pow))) * Math.pow(10, pow);
 }
 
 /**

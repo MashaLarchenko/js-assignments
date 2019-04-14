@@ -65,7 +65,24 @@ function* getPermutations(chars) {
  *    [ 1, 6, 5, 10, 8, 7 ] => 18  (buy at 1,6,5 and sell all at 10)
  */
 function getMostProfitFromStockQuotes(quotes) {
-    throw new Error('Not implemented');
+    var minIdx = 0;
+    var maxIdx = 1;
+    var currMin = 0;
+    var maxProfit = 0;
+
+    for(var i = 1; i < quotes.length; i++) {
+        if(quotes[i] < quotes[currMin]) { 
+        	currMin = i;
+        }
+        if(quotes[maxIdx] - quotes[minIdx] < quotes[i] - quotes[currMin]) {
+                maxIdx = i;
+            	minIdx = currMin;
+        }
+
+    }
+
+    maxProfit  = quotes[maxIdx] - quotes[minIdx];
+    return maxProfit;
 }
 
 
