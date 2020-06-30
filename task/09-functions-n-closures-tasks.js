@@ -184,13 +184,14 @@ function partialUsingArguments(fn) {
  */
 function getIdGeneratorFunction(startFrom) {
     
-    return function* generator() {
-        let res = startFrom;
-     while(startFrom){ 
-        yield res++;
-        }
+    // return function* generator() {
+    //     let res = startFrom;
+    //  while(startFrom){ 
+    //     yield res++;
+    //     }
        
-    }
+    // }
+    throw new Error('Not implemented');
 }
 
 

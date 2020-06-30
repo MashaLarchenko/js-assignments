@@ -58,9 +58,9 @@ function getJSON(obj) {
  *
  */
 function fromJSON(proto, json) {
-    let obj = JSON.parse(json);
-   return  obj.prototype = proto;
-    
+//     let obj = JSON.parse(json);
+//    return  obj.prototype = proto; 
+throw new Error('Not implemented');
 }
 
 

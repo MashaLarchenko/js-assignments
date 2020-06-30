@@ -54,7 +54,7 @@ function getRegexForGuid() {
  */
 function getRegexForPitSpot() {
    let arr = ['pit', 'spot', 'spate', 'slap two', 'respite'];
-
+   throw new Error('Not implemented');
 }
 
 
